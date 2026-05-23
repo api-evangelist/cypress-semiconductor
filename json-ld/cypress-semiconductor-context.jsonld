@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "cypress": "https://raw.githubusercontent.com/api-evangelist/cypress-semiconductor/refs/heads/main/json-ld/cypress-semiconductor-context.jsonld#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "image": "schema:image",
+    "manufacturer": {
+      "@id": "schema:manufacturer",
+      "@type": "@id"
+    },
+    "parentOrganization": {
+      "@id": "schema:parentOrganization",
+      "@type": "@id"
+    },
+    "Company": "schema:Organization",
+    "Acquisition": "cypress:Acquisition",
+    "Microcontroller": "cypress:Microcontroller",
+    "WirelessSoC": "cypress:WirelessSoC",
+    "NORFlash": "cypress:NORFlash",
+    "CapacitiveSensor": "cypress:CapacitiveSensor",
+    "DevelopmentKit": "cypress:DevelopmentKit",
+    "BoardSupportPackage": "cypress:BoardSupportPackage",
+    "Toolchain": "cypress:Toolchain",
+    "Middleware": "cypress:Middleware",
+    "Configurator": "cypress:Configurator",
+    "psoc": "cypress:psoc",
+    "psocFamily": "cypress:psocFamily",
+    "airocFamily": "cypress:airocFamily",
+    "traveoFamily": "cypress:traveoFamily",
+    "core": "cypress:core",
+    "flashKB": {
+      "@id": "cypress:flashKB",
+      "@type": "schema:Integer"
+    },
+    "sramKB": {
+      "@id": "cypress:sramKB",
+      "@type": "schema:Integer"
+    },
+    "partNumber": "cypress:partNumber",
+    "kitNumber": "cypress:kitNumber",
+    "wirelessStandard": "cypress:wirelessStandard",
+    "bluetoothVersion": "cypress:bluetoothVersion",
+    "wifiStandard": "cypress:wifiStandard",
+    "sensingMethod": "cypress:sensingMethod",
+    "tuningMode": "cypress:tuningMode",
+    "configuratorType": "cypress:configuratorType",
+    "modustoolboxVersion": "cypress:modustoolboxVersion",
+    "compiler": "cypress:compiler",
+    "supportedIDE": "cypress:supportedIDE",
+    "rtos": "cypress:rtos",
+    "acquiredBy": {
+      "@id": "cypress:acquiredBy",
+      "@type": "@id"
+    },
+    "acquisitionDate": {
+      "@id": "cypress:acquisitionDate",
+      "@type": "schema:Date"
+    },
+    "acquisitionValueUSD": {
+      "@id": "cypress:acquisitionValueUSD",
+      "@type": "schema:MonetaryAmount"
+    },
+    "legacyBrand": "cypress:legacyBrand",
+    "currentBrand": "cypress:currentBrand",
+    "deprecatedBy": {
+      "@id": "cypress:deprecatedBy",
+      "@type": "@id"
+    },
+    "githubOrganization": {
+      "@id": "cypress:githubOrganization",
+      "@type": "@id"
+    },
+    "communityForum": {
+      "@id": "cypress:communityForum",
+      "@type": "@id"
+    }
+  }
+}

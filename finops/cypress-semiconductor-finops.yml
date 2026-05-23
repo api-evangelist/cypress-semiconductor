@@ -1,0 +1,116 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: Cypress Semiconductor
+providerId: cypress-semiconductor
+publisherName: Infineon Technologies AG (parent of Cypress Semiconductor since 2020)
+serviceCategory: Semiconductors
+created: '2026-05-23'
+modified: '2026-05-23'
+reconciled: true
+tags:
+  - Acquired
+  - Embedded Systems
+  - FinOps
+  - FOCUS
+  - Infineon
+  - Open Source
+  - Semiconductors
+description: >-
+  FOCUS-aligned FinOps record for the former Cypress Semiconductor product
+  lines (PSoC, AIROC/WICED, CapSense, TRAVEO, Semper/HyperFlash NOR Flash)
+  now operating under Infineon Technologies following the April 2020
+  acquisition. The Cypress developer software ecosystem (ModusToolbox tools,
+  HAL/PDL, AIROC, CapSense middleware, BSPs) is free / open-source; spend
+  flows as bill-of-material direct cost for silicon and evaluation hardware,
+  invoiced by Infineon directly or through global distributors, not as API
+  consumption.
+notes: >-
+  There is no metered SaaS API. The billing model reflects hardware
+  procurement plus, on the firmware engineering side, internal labor —
+  not API call metering. Engineering procurement teams should attribute
+  spend to Infineon as legal counterparty (Cypress as legal entity has been
+  rolled into Infineon).
+sources:
+  - https://www.infineon.com/cms/en/about-infineon/company/acquisitions/cypress/
+  - https://www.infineon.com
+  - https://github.com/Infineon
+  - https://github.com/cypresssemiconductorco
+billingModel:
+  pricingCategory: Hardware Purchase
+  billingFrequency: Per-Invoice
+  billingCurrency: USD
+  chargeCategories:
+    - Purchase
+focusColumns:
+  ServiceName: Cypress Semiconductor (now part of Infineon)
+  ServiceCategory: Semiconductors
+  ProviderName: Infineon Technologies
+  PublisherName: Infineon Technologies AG
+  InvoiceIssuerName: Infineon Technologies AG (or authorized distributor of record)
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+meters:
+  - name: silicon_units_purchased
+    description: Count of Cypress-originated ICs (PSoC, AIROC, CapSense, TRAVEO, Semper/HyperFlash) ordered
+    unit: unit
+    aggregation: sum
+    dimensions:
+      - part_number
+      - product_family
+      - distributor
+      - program
+  - name: development_kits_purchased
+    description: Cypress/Infineon development kit and evaluation board purchases (e.g. CY8CKIT-062S2-43012, KIT_T2G-B-H_EVK)
+    unit: unit
+    aggregation: sum
+    dimensions:
+      - kit_family
+      - distributor
+  - name: tool_downloads
+    description: ModusToolbox / PSoC Creator / WICED Studio downloads from softwaretools.infineon.com (free; tracked for adoption)
+    unit: download
+    aggregation: count
+    dimensions:
+      - package
+      - version
+  - name: sdk_clones
+    description: Open-source SDK clones / fetches from github.com/Infineon (free; tracked for adoption)
+    unit: clone
+    aggregation: count
+    dimensions:
+      - repo
+principles:
+  - name: Visibility
+    description: >-
+      Track Cypress / Infineon spend through ERP and procurement systems and
+      distributor portals (Digi-Key, Mouser, Arrow, Avnet); SDK adoption
+      can be tracked via GitHub release downloads and Infineon Developer
+      Community forum activity.
+  - name: Allocation
+    description: >-
+      Allocate silicon costs to BOMs and product lines (PSoC host, AIROC
+      wireless, CapSense touch, NOR Flash, TRAVEO ECU). SDK use carries no
+      direct cost so no chargeback tag is needed.
+  - name: Optimization
+    description: >-
+      Optimization levers are part consolidation across BOMs (e.g. picking
+      one AIROC combo over discrete radios), multi-source qualification,
+      and volume agreements with Infineon / distributors. ModusToolbox
+      tooling and middleware are free.
+  - name: Accountability
+    description: >-
+      Procurement and hardware engineering own silicon and dev-kit cost;
+      firmware teams own the open-source SDK consumption with no
+      chargeback. Legal counterparty is Infineon Technologies AG, not
+      Cypress Semiconductor (the standalone legal entity has been wound
+      into Infineon since April 2020).
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/cypress-semiconductor/refs/heads/main/json-schema/cypress-semiconductor-board-support-package-schema.json",
+  "title": "ModusToolbox Board Support Package",
+  "description": "Logical structure of a ModusToolbox Board Support Package (TARGET_*) repository, including the development kit metadata, target device, configured peripherals, and bundled design.modus configuration.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "device",
+    "kit"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "BSP identifier matching the TARGET_* repo name on the Infineon GitHub org.",
+      "examples": [
+        "TARGET_CY8CKIT-062S2-43012",
+        "TARGET_CY8CPROTO-062-4343W",
+        "TARGET_KIT_T2G-B-H_EVK"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the development kit."
+    },
+    "kit": {
+      "type": "object",
+      "required": [
+        "partNumber",
+        "category"
+      ],
+      "properties": {
+        "partNumber": {
+          "type": "string",
+          "description": "Marketing part number of the kit, e.g. CY8CKIT-062S2-43012."
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "PSoC4",
+            "PSoC6",
+            "PSoCEdge",
+            "TRAVEOT2G",
+            "XMC",
+            "AIROC",
+            "USBPD"
+          ]
+        }
+      }
+    },
+    "device": {
+      "type": "object",
+      "required": [
+        "mpn",
+        "family",
+        "core"
+      ],
+      "properties": {
+        "mpn": {
+          "type": "string",
+          "description": "Manufacturer part number of the primary MCU on the kit."
+        },
+        "family": {
+          "type": "string"
+        },
+        "core": {
+          "type": "string"
+        },
+        "flashKB": {
+          "type": "integer"
+        },
+        "sramKB": {
+          "type": "integer"
+        }
+      }
+    },
+    "connectivity": {
+      "type": "array",
+      "description": "Wireless or wired connectivity components mounted on the BSP (e.g. CYW4343W, CYW43012, CYW55513).",
+      "items": {
+        "type": "string"
+      }
+    },
+    "designModusPath": {
+      "type": "string",
+      "description": "Path to the design.modus Device Configurator file shipped with the BSP."
+    },
+    "additionalDesignFiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "configurator": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "description": "ModusToolbox capability tags advertised by the BSP, e.g. BSP_DESIGN_MODUS, MCU_CY8C624ABZI_S2D44.",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

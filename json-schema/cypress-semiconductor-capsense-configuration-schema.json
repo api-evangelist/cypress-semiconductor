@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/cypress-semiconductor/refs/heads/main/json-schema/cypress-semiconductor-capsense-configuration-schema.json",
+  "title": "CapSense Configuration",
+  "description": "Logical model of a CapSense Configurator tuning output (the cycfg_capsense.* sources generated for a PSoC application). Encodes the widget topology and tuning parameters consumed by the CapSense middleware.",
+  "type": "object",
+  "required": [
+    "version",
+    "widgets"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "CapSense middleware version this configuration targets."
+    },
+    "tuningMode": {
+      "type": "string",
+      "description": "SmartSense or manual tuning strategy.",
+      "enum": [
+        "SmartSenseFullAutoTune",
+        "SmartSenseHardwareParameters",
+        "Manual"
+      ]
+    },
+    "csdConfiguration": {
+      "type": "object",
+      "description": "CSD (Self-Capacitance) block configuration shared across widgets.",
+      "properties": {
+        "modClockDivider": {
+          "type": "integer"
+        },
+        "snsClockDivider": {
+          "type": "integer"
+        },
+        "iDac8Gain": {
+          "type": "integer"
+        }
+      }
+    },
+    "widgets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "sensingMethod"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Button",
+              "LinearSlider",
+              "RadialSlider",
+              "MatrixButton",
+              "Touchpad",
+              "Proximity",
+              "LiquidLevel"
+            ]
+          },
+          "sensingMethod": {
+            "type": "string",
+            "enum": [
+              "CSD",
+              "CSX",
+              "ISX",
+              "MSC"
+            ]
+          },
+          "fingerCapacitance_pF": {
+            "type": "number"
+          },
+          "fingerThreshold": {
+            "type": "integer"
+          },
+          "noiseThreshold": {
+            "type": "integer"
+          },
+          "scanResolutionBits": {
+            "type": "integer",
+            "minimum": 8,
+            "maximum": 16
+          },
+          "sensors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "pin": {
+                  "type": "string",
+                  "description": "PSoC port.pin assignment, e.g. P0.4."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

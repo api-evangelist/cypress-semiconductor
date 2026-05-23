@@ -1,0 +1,69 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Cypress Semiconductor
+providerId: cypress-semiconductor
+created: '2026-05-23'
+modified: '2026-05-23'
+reconciled: true
+tags:
+  - Embedded Systems
+  - Hardware
+  - Infineon
+  - Rate Limiting
+description: >-
+  Cypress' (now Infineon's) developer-facing surface is local: ModusToolbox
+  tools, BSPs, HAL/PDL, AIROC, and CapSense libraries are compiled into
+  firmware images that run on PSoC, AIROC, and TRAVEO silicon. There is no
+  central HTTP API to throttle. Throughput is bounded by the underlying
+  transport (UART, SPI, QSPI, USB, BLE, Wi-Fi) and the silicon's clock and
+  sample rate, not by a vendor rate-limit policy. The only network-facing
+  Infineon surfaces relevant to developers are the Infineon Developer
+  Community forum and the GitHub-hosted documentation/release downloads,
+  which inherit GitHub's standard rate limits rather than imposing a Cypress
+  / Infineon policy.
+notes: >-
+  Limits are bus / silicon bound and per-device, documented in each part's
+  datasheet rather than a network rate-limit page.
+sources:
+  - https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/
+  - https://github.com/Infineon
+  - https://community.infineon.com
+responseCodes: {}
+limits:
+  - name: Per-Device Bus Throughput
+    scope: device
+    metric: varies
+    limit: 'see part datasheet (SPI/QSPI/I2C/UART/USB bus speed)'
+  - name: AIROC Wi-Fi Link Throughput
+    scope: device
+    metric: bits-per-second
+    limit: 'bounded by 802.11 PHY of CYW43xxx / CYW55xxx variant'
+  - name: AIROC Bluetooth Link Throughput
+    scope: device
+    metric: bits-per-second
+    limit: 'bounded by Bluetooth Core spec (LE 2M PHY ~2 Mbps PHY rate, application throughput lower)'
+  - name: GitHub Release Downloads
+    scope: developer
+    metric: requests
+    limit: 'inherits github.com rate limits (60/hr unauthenticated, 5000/hr authenticated)'
+policies:
+  - name: Local SDK
+    description: >-
+      ModusToolbox tools and embedded libraries are local; rate limiting is
+      not applicable in the SaaS sense. Performance characteristics are
+      documented per Cypress/Infineon part datasheet.
+  - name: GitHub Hosting
+    description: >-
+      Library distribution (mtb-pdl-cat1, mtb-hal-cat1, capsense,
+      wifi-host-driver, btsdk-*, BSPs) is hosted on github.com/Infineon and
+      subject to GitHub's platform rate limits, not an Infineon-specific
+      policy.
+  - name: Community Forum
+    description: >-
+      community.infineon.com applies forum-standard anti-abuse throttling;
+      no published per-account API rate-limit table because the forum is
+      browse-and-post, not a developer API surface.
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com

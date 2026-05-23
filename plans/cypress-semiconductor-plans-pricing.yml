@@ -1,0 +1,96 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Cypress Semiconductor
+providerId: cypress-semiconductor
+created: '2026-05-23'
+modified: '2026-05-23'
+reconciled: true
+tags:
+  - Acquired
+  - Embedded Systems
+  - Free
+  - Hardware
+  - Infineon
+  - Open Source
+  - Semiconductor
+description: >-
+  Cypress' developer surface is delivered as free downloadable tools and
+  open-source embedded software under Infineon's ModusToolbox umbrella. There
+  is no metered API tier, no plan subscription, and no per-request fee for
+  ModusToolbox, the PSoC HAL/PDL, CapSense, AIROC Bluetooth/Wi-Fi middleware,
+  or TRAVEO T2G drivers. Commercial value flows through purchase of the
+  underlying Cypress-originated silicon (PSoC, AIROC, CapSense, TRAVEO,
+  Semper/HyperFlash NOR) sold by Infineon directly and through global
+  distributors. The legacy WICED Studio and PSoC Creator IDEs are also free
+  but in maintenance mode and superseded by ModusToolbox.
+notes: >-
+  No SaaS API tiers exist. This file records the de-facto offering: a free
+  open-source / freely-licensed developer ecosystem bundled with silicon
+  purchase. Hardware part pricing is quoted via distributors (Digi-Key, Mouser,
+  Arrow, Avnet) and direct Infineon sales, not as an API charge.
+sources:
+  - https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/
+  - https://softwaretools.infineon.com/tools/com.ifx.tb.tool.modustoolbox
+  - https://github.com/Infineon/modustoolbox-software
+  - https://www.infineon.com/cms/en/about-infineon/company/acquisitions/cypress/
+plans:
+  - id: cypress-modustoolbox-free
+    name: ModusToolbox Free Developer Ecosystem
+    type: free
+    description: >-
+      ModusToolbox tools, BSPs, HAL, PDL, middleware (CapSense, AIROC
+      Bluetooth, AIROC Wi-Fi, serial-flash, serial-memory), configurators,
+      code examples, and training materials are all distributed free of
+      charge. PSoC Creator and WICED Studio remain free downloads in
+      maintenance mode.
+    entries:
+      - label: Tool Download
+        description: ModusToolbox Tools Package + IDE extensions (VS Code / Eclipse)
+        name: tool_download
+        type: flat
+        metric: download
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '$0'
+        userMultiplied: false
+      - label: SDK / Library Use
+        description: HAL, PDL, AIROC, CapSense, and other ModusToolbox libraries via GitHub
+        name: sdk_use
+        type: flat
+        metric: build
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '$0'
+        userMultiplied: false
+      - label: Hardware Purchase
+        description: Underlying Cypress-originated silicon and Infineon development kits (priced separately by distributor / direct sales)
+        name: hardware_purchase
+        type: flat
+        metric: device
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: 'see distributor (Digi-Key / Mouser / Arrow / Avnet / Infineon Direct)'
+        userMultiplied: false
+    elements:
+      - name: ModusToolbox Tools Package
+      - name: ModusToolbox VS Code Extension
+      - name: ModusToolbox Eclipse IDE
+      - name: PSoC HAL (mtb-hal-cat1)
+      - name: PSoC PDL (mtb-pdl-cat1)
+      - name: CapSense Middleware
+      - name: AIROC Bluetooth (btsdk)
+      - name: AIROC Wi-Fi Host Driver
+      - name: 2,143-repo Infineon GitHub Org
+      - name: Infineon Developer Community
+      - name: Legacy PSoC Creator (maintenance mode)
+      - name: Legacy WICED Studio (deprecated, AIROC successor)
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com

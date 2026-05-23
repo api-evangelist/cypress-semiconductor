@@ -1,0 +1,79 @@
+name: Cypress Semiconductor Vocabulary
+description: Domain vocabulary covering the Cypress Semiconductor product lines (PSoC, AIROC/WICED,
+  CapSense, TRAVEO, NOR Flash) and the Infineon ModusToolbox development ecosystem that succeeded
+  Cypress' PSoC Creator and WICED Studio after Infineon's $9.4B April 2020 acquisition. Use this
+  vocabulary when classifying repos, BSPs, configurators, middleware, and reference designs that
+  carry Cypress-era product DNA inside Infineon's GitHub organization.
+url: https://raw.githubusercontent.com/api-evangelist/cypress-semiconductor/refs/heads/main/vocabulary/cypress-semiconductor-vocabulary.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+
+corporate:
+  - term: Cypress Semiconductor
+    definition: US-headquartered semiconductor company founded 1982, acquired by Infineon in April 2020.
+    relatedTo:
+      - Infineon Technologies
+      - Acquisition
+  - term: Infineon Technologies
+    definition: German semiconductor manufacturer; parent organization of the former Cypress business since 2020.
+    relatedTo:
+      - Cypress Semiconductor
+  - term: Acquisition
+    definition: Infineon's $9.4B all-cash acquisition of Cypress that closed 16 April 2020.
+    relatedTo:
+      - Cypress Semiconductor
+      - Infineon Technologies
+
+productFamilies:
+  - term: PSoC
+    definition: Programmable System-on-Chip — Cypress' flagship MCU family with configurable analog and digital fabric. Subfamilies include PSoC 4, PSoC 6, and PSoC Edge.
+  - term: PSoC 4
+    definition: Single-core Cortex-M0+ PSoC family targeting cost-sensitive HMI and sensing applications.
+  - term: PSoC 6
+    definition: Dual-core Cortex-M4 + Cortex-M0+ PSoC family targeting secure IoT endpoints.
+  - term: PSoC Edge
+    definition: ML-capable Cortex-M55 + Cortex-M33 PSoC family for edge AI workloads.
+  - term: AIROC
+    definition: Infineon brand for the Cypress-inherited wireless connectivity portfolio (formerly WICED), spanning Bluetooth, Wi-Fi, and combo chips.
+  - term: WICED
+    definition: Legacy Cypress Wireless Internet Connectivity for Embedded Devices brand; superseded by AIROC.
+  - term: CapSense
+    definition: Cypress' capacitive touch sensing IP for buttons, sliders, touchpads, and proximity.
+  - term: TRAVEO T2G
+    definition: Automotive Cortex-M body, cluster, and gateway MCU family inherited from Cypress.
+  - term: Semper
+    definition: Cypress' high-reliability serial NOR Flash family carried into Infineon's memory portfolio.
+  - term: HyperFlash
+    definition: Cypress' high-bandwidth HyperBus serial NOR Flash family.
+  - term: USB-C Power Delivery MCU
+    definition: Cypress-originated EZ-PD controllers for USB Power Delivery applications.
+
+developmentEcosystem:
+  - term: ModusToolbox
+    definition: Infineon's modern cross-platform embedded development ecosystem (tools, BSPs, HAL, PDL, middleware, configurators) — successor to PSoC Creator and WICED Studio.
+  - term: PSoC Creator
+    definition: Legacy Windows-only IDE for PSoC 3/4/5; in maintenance mode, replaced for PSoC 6 and newer by ModusToolbox.
+  - term: WICED Studio
+    definition: Legacy Cypress wireless SDK and IDE; deprecated, replaced by AIROC flows in ModusToolbox.
+  - term: Board Support Package
+    definition: ModusToolbox TARGET_* package providing BSP design.modus, default Device Configurator settings, and kit metadata.
+  - term: HAL
+    definition: PSoC Hardware Abstraction Layer (mtb-hal-cat1) — portable C peripheral API across PSoC, AIROC host, and TRAVEO T2G.
+  - term: PDL
+    definition: Peripheral Driver Library (mtb-pdl-cat1) — low-level register driver library underneath the HAL.
+  - term: Configurator
+    definition: GUI tool that generates C source for a ModusToolbox application personality (device, capsense, bluetooth, qspi, smartio, etc.).
+  - term: Device Configurator
+    definition: ModusToolbox tool for setting up clocks, peripherals, and pins, producing design.modus + cycfg_* sources.
+  - term: CapSense Configurator
+    definition: ModusToolbox tool for tuning CapSense widgets, producing cycfg_capsense.* sources.
+
+ecosystem:
+  - term: Infineon GitHub Organization
+    definition: github.com/Infineon — 2,143 public repositories housing the modern Cypress + Infineon developer surface.
+  - term: Legacy Cypress GitHub Organization
+    definition: github.com/cypresssemiconductorco — historic Cypress org, now reduced to 4 placeholder/redirect repos plus amazon-freertos.
+  - term: Infineon Developer Community
+    definition: community.infineon.com — primary support forum hosting per-product subforums (ModusToolbox, AIROC Bluetooth, AIROC Wi-Fi, TRAVEO T2G, PSoC, etc.).
+  - term: Infineon Developer Center / Software Tools
+    definition: softwaretools.infineon.com — Infineon's hosted catalog of installable developer tools including the ModusToolbox Tools Package.

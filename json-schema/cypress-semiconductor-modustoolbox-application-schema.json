@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/cypress-semiconductor/refs/heads/main/json-schema/cypress-semiconductor-modustoolbox-application-schema.json",
+  "title": "ModusToolbox Application",
+  "description": "Logical shape of a ModusToolbox application as defined by its top-level Makefile, .mtbx project file, and dependent .mtb component manifests. Captures the fields a tool such as Project Creator or Library Manager would read.",
+  "type": "object",
+  "required": [
+    "name",
+    "target",
+    "core",
+    "toolchain"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Application name as set by APPNAME in the Makefile."
+    },
+    "target": {
+      "type": "string",
+      "description": "ModusToolbox BSP target identifier, e.g. APP_CY8CKIT-062S2-43012 or APP_CY8CPROTO-062-4343W.",
+      "examples": [
+        "APP_CY8CKIT-062S2-43012",
+        "APP_CY8CPROTO-062-4343W",
+        "APP_KIT_T2G-B-H_EVK"
+      ]
+    },
+    "core": {
+      "type": "string",
+      "description": "Target Arm core executing the application image.",
+      "enum": [
+        "CM0P",
+        "CM4",
+        "CM7",
+        "CM33",
+        "CM55"
+      ]
+    },
+    "toolchain": {
+      "type": "string",
+      "description": "Compiler toolchain configured for the build.",
+      "enum": [
+        "GCC_ARM",
+        "ARM",
+        "IAR",
+        "LLVM_ARM"
+      ]
+    },
+    "deviceFamily": {
+      "type": "string",
+      "description": "Cypress/Infineon device family the application is built for.",
+      "enum": [
+        "PSoC4",
+        "PSoC6",
+        "PSoCEdge",
+        "TRAVEOII",
+        "TRAVEOT2G",
+        "XMC",
+        "AIROC",
+        "USBPD"
+      ]
+    },
+    "components": {
+      "type": "array",
+      "description": "ModusToolbox COMPONENTS list selected at build time (e.g. FREERTOS, BSP_DESIGN_MODUS).",
+      "items": {
+        "type": "string"
+      }
+    },
+    "libraries": {
+      "type": "array",
+      "description": "Resolved .mtb library dependencies from deps/ entries.",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "uri",
+          "commit"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "uri": {
+            "type": "string",
+            "format": "uri"
+          },
+          "commit": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "configurators": {
+      "type": "array",
+      "description": "ModusToolbox configurator files referenced by the application.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "device-configurator",
+          "capsense-configurator",
+          "bluetooth-configurator",
+          "qspi-configurator",
+          "smartio-configurator",
+          "seglcd-configurator",
+          "ez-pd-configurator",
+          "lin-configurator"
+        ]
+      }
+    },
+    "defines": {
+      "type": "array",
+      "description": "Preprocessor symbols pushed into the build via DEFINES.",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

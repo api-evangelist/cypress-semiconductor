@@ -1,0 +1,124 @@
+extends: spectral:oas
+documentationUrl: https://github.com/api-evangelist/cypress-semiconductor
+
+# Spectral ruleset enforcing API Evangelist conventions for Cypress Semiconductor / Infineon
+# embedded developer artifacts. Cypress' developer surface is predominantly C/C++ embedded
+# (ModusToolbox HAL, PDL, middleware) rather than HTTP/REST, so these rules focus on apis.yml
+# and configurator manifest discipline rather than OpenAPI endpoint shape.
+
+rules:
+  cypress-info-title-required:
+    description: API entries must carry a non-empty name (used as the OpenAPI info.title equivalent in apis.yml).
+    message: '{{property}} should not be empty.'
+    severity: error
+    given: $.apis[*]
+    then:
+      field: name
+      function: truthy
+
+  cypress-info-description-required:
+    description: Every API entry must include a description that explains the embedded surface and any Cypress-to-Infineon rebrand.
+    message: API entries require a description.
+    severity: error
+    given: $.apis[*]
+    then:
+      field: description
+      function: truthy
+
+  cypress-tags-title-case:
+    description: API tags must be Title Case (e.g. "Embedded Systems", "Bluetooth", "Microcontrollers"), not lowercase or kebab-case.
+    message: Tag "{{value}}" should be Title Case.
+    severity: warn
+    given: $.apis[*].tags[*]
+    then:
+      function: pattern
+      functionOptions:
+        match: '^[A-Z0-9][A-Za-z0-9]*( [A-Z0-9][A-Za-z0-9]*)*$'
+
+  cypress-baseurl-required:
+    description: API entries must provide a baseURL (the canonical product or repo URL).
+    message: baseURL is missing for this API.
+    severity: error
+    given: $.apis[*]
+    then:
+      field: baseURL
+      function: truthy
+
+  cypress-humanurl-required:
+    description: API entries must provide a humanURL pointing to documentation a developer can read.
+    message: humanURL is missing for this API.
+    severity: error
+    given: $.apis[*]
+    then:
+      field: humanURL
+      function: truthy
+
+  cypress-properties-min:
+    description: API entries should expose at least one property entry (Documentation, GitHubRepository, SDK, etc.).
+    message: At least one property entry is required per API.
+    severity: warn
+    given: $.apis[*].properties
+    then:
+      function: length
+      functionOptions:
+        min: 1
+
+  cypress-github-repo-on-infineon-or-legacy:
+    description: GitHubRepository URLs must live under the Infineon org or the legacy cypresssemiconductorco org.
+    message: GitHub repo "{{value}}" should be under github.com/Infineon or github.com/cypresssemiconductorco.
+    severity: warn
+    given: $..properties[?(@.type == 'GitHubRepository')].url
+    then:
+      function: pattern
+      functionOptions:
+        match: '^https?://github\.com/(Infineon|cypresssemiconductorco)/'
+
+  cypress-documentation-on-infineon:
+    description: Documentation links should point at infineon.com, documentation.infineon.com, infineon.github.io, community.infineon.com, or the kept-alive cypress.com redirect.
+    message: Documentation URL "{{value}}" should live on an Infineon-controlled domain.
+    severity: info
+    given: $..properties[?(@.type == 'Documentation')].url
+    then:
+      function: pattern
+      functionOptions:
+        match: '^https?://([^/]+\.)?(infineon\.com|infineon\.github\.io|cypress\.com)(/|$)'
+
+  cypress-no-deprecated-psoc-creator:
+    description: PSoC Creator is deprecated for PSoC 6 / PSoC Edge / AIROC — new APIs should reference ModusToolbox, not PSoC Creator.
+    message: Avoid PSoC Creator as the primary tool reference; use ModusToolbox instead.
+    severity: warn
+    given: $.apis[*].description
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: '(?i)PSoC Creator(?! \(legacy| has been| in maintenance| deprecated)'
+
+  cypress-no-deprecated-wiced-studio:
+    description: WICED Studio is deprecated in favor of AIROC flows under ModusToolbox.
+    message: WICED Studio references should be marked legacy/deprecated; current flow is AIROC under ModusToolbox.
+    severity: warn
+    given: $.apis[*].description
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: '(?i)WICED Studio(?! has been| deprecated| legacy| in maintenance)'
+
+  cypress-acquisition-acknowledged:
+    description: The root description should acknowledge the Infineon acquisition so consumers understand the brand continuity.
+    message: Root description should mention the Infineon acquisition.
+    severity: warn
+    given: $.description
+    then:
+      function: pattern
+      functionOptions:
+        match: '(?i)(Infineon).*(acqui|acquisition|subsidiary|2020)'
+
+  cypress-common-properties-min:
+    description: Common properties should include at least Portal, GitHubOrganization, and Support entries.
+    message: At least three common property entries should be defined.
+    severity: warn
+    given: $.common
+    then:
+      function: length
+      functionOptions:
+        min: 3
