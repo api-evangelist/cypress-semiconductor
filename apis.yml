@@ -17,7 +17,7 @@ description: Cypress Semiconductor was a US-based semiconductor company known fo
   users to the Infineon org. Cypress' APIs are predominantly embedded software APIs (C/C++ HAL,
   PDL, middleware libraries) rather than HTTP/REST surfaces, consumed by firmware engineers via
   ModusToolbox, Eclipse, and Visual Studio Code workflows.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Acquired
   - Bluetooth
@@ -51,7 +51,7 @@ apis:
       - PSoC
       - TRAVEO
       - XMC
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://www.infineon.com
     humanURL: https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/
     properties:
@@ -84,7 +84,7 @@ apis:
       - Microcontrollers
       - PDL
       - PSoC
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://github.com/Infineon/mtb-hal-cat1
     humanURL: https://infineon.github.io/mtb-hal-cat1/html/index.html
     properties:
@@ -108,7 +108,7 @@ apis:
       - Embedded Systems
       - WICED
       - Wireless
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://www.infineon.com
     humanURL: https://www.infineon.com/cms/en/product/promopages/airoc-bluetooth/
     properties:
@@ -133,7 +133,7 @@ apis:
       - WHD
       - WICED
       - WiFi
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://github.com/Infineon/wifi-host-driver
     humanURL: https://infineon.github.io/wifi-host-driver/html/index.html
     properties:
@@ -156,7 +156,7 @@ apis:
       - HMI
       - PSoC
       - Touch Sensing
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://github.com/Infineon/capsense
     humanURL: https://infineon.github.io/capsense/capsense_api_reference_manual/html/index.html
     properties:
@@ -178,7 +178,7 @@ apis:
       - Embedded Systems
       - Microcontrollers
       - TRAVEO
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://www.infineon.com
     humanURL: https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/
     properties:
@@ -201,7 +201,7 @@ apis:
       - Memory
       - NOR Flash
       - Semper
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://www.infineon.com
     humanURL: https://www.infineon.com/cms/en/product/memories/nor-flash/
     properties:
