@@ -66,7 +66,7 @@ apis:
       - url: https://github.com/Infineon/training-modustoolbox
         type: Training
       - url: https://softwaretools.infineon.com/tools/com.ifx.tb.tool.modustoolbox
-        type: SDK
+        type: SDKs
       - url: https://community.infineon.com/t5/ModusToolbox/bd-p/ModusToolboxForum
         type: Support
   - aid: cypress-semiconductor:psoc-hal

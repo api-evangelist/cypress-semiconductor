@@ -3,16 +3,15 @@
   "feeds": [
     {
       "source": "https://community.infineon.com/t5/Blogs/ct-p/Blogs",
-      "error": "HTTPError"
+      "saved": 0,
+      "error": "302 redirect to SSO login (permission denied); blog requires authentication"
     },
     {
       "source": "https://www.linkedin.com/company/infineon-technologies",
-      "feed_url": "https://www.linkedin.com/company/infineon-technologies",
-      "title": "",
       "saved": 0,
-      "method": "none"
+      "error": "linkedin, not a fetchable blog feed"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:35:55Z"
 }
