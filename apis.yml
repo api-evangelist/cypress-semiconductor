@@ -212,6 +212,10 @@ apis:
       - url: https://github.com/Infineon/serial-memory
         type: GitHubRepository
 common:
+  - type: VulnerabilityDisclosure
+    url: security/cypress-semiconductor-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/cypress-semiconductor-domain-security.yml
   - type: Portal
     url: https://www.infineon.com
   - type: DeveloperPortal
