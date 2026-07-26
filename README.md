@@ -119,11 +119,6 @@ TRAVEO T2G is the automotive Arm Cortex-M microcontroller family inherited from 
 - [GitHubRepository](https://github.com/Infineon/mtb-pdl-cat1)
 - [Support](https://community.infineon.com/t5/TRAVEO-T2G/bd-p/TRAVEOT2GForum)
 
-### Cypress / Infineon NOR Flash Memory
-
-Cypress' Semper, HyperFlash, FL-S, and FL-L Serial NOR Flash families became part of Infineon's memory portfolio after the 2020 acquisition. Developer-facing artifacts include the Semper Flash Configuration Tool (separate from ModusToolbox), reference drivers, and the serial-flash and serial-memory ModusToolbox middleware libraries that wrap SPI/QSPI/HyperBus access for PSoC hosts. The product line is documented under infineon.com/memory.
-
-**Human URL:** [https://www.infineon.com/cms/en/product/memories/nor-flash/](https://www.infineon.com/cms/en/product/memories/nor-flash/)
 
 #### Tags
 
