@@ -28,6 +28,19 @@ tags:
   - Microcontrollers
   - NOR Flash
   - PSoC
+  - Semiconductors
+  - Wi-Fi
+tags_raw:
+  - Acquired
+  - Bluetooth
+  - CapSense
+  - Embedded Systems
+  - Hardware
+  - Infineon
+  - IoT
+  - Microcontrollers
+  - NOR Flash
+  - PSoC
   - Semiconductor
   - WiFi
 apis:
@@ -104,6 +117,13 @@ apis:
     name: AIROC Wi-Fi (formerly WICED)
     description: AIROC Wi-Fi is the Infineon-rebranded Cypress WICED Wi-Fi stack and SDK, including the Wi-Fi Host Driver (WHD) and connectivity middleware that drives CYW43xxx and CYW55xxx Wi-Fi chipsets originally designed by Cypress (and prior to that, Broadcom). It is delivered as ModusToolbox middleware libraries (wifi-host-driver, wifi-connection-manager, wifi-mw-core) and supports station mode, AP mode, WPA3, and cloud-connected IoT applications on PSoC 6 and PSoC Edge hosts.
     tags:
+      - AIROC
+      - Embedded Systems
+      - IoT
+      - WHD
+      - WICED
+      - Wi-Fi
+    tags_raw:
       - AIROC
       - Embedded Systems
       - IoT
