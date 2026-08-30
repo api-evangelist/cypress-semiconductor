@@ -40,8 +40,8 @@ tags:
   - Microcontrollers
   - NOR Flash
   - PSoC
-  - Semiconductors
-  - Wi-Fi
+  - Semiconductor
+  - WiFi
 tags_raw:
   - Acquired
   - Bluetooth
@@ -134,7 +134,7 @@ apis:
       - IoT
       - WHD
       - WICED
-      - Wi-Fi
+      - WiFi
     tags_raw:
       - AIROC
       - Embedded Systems
