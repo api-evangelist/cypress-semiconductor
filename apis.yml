@@ -189,6 +189,8 @@ apis:
       - url: https://community.infineon.com/t5/TRAVEO-T2G/bd-p/TRAVEOT2GForum
         type: Support
 common:
+  - type: Website
+    url: https://www.infineon.com/
   - type: VulnerabilityDisclosure
     url: security/cypress-semiconductor-vulnerability-disclosure.yml
   - type: DomainSecurity
