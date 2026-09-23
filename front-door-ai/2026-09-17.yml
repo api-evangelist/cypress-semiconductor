@@ -1,0 +1,32 @@
+# Front Door AI Index — cypress-semiconductor — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: cypress-semiconductor
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.infineon.com
+  final_host: www.infineon.com
+  ownership: own
+  owner: cypress-semiconductor
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 33
+  host_score: 33
+  density: 3.99
+  words: 8277
+  tiers:
+    agentic: 1
+    core: 30
+    model: 2
+  ambiguous: 66
+  top_terms:
+    smart: 55
+    AI: 23
+    automation: 9
+    machine learning: 5
+    artificial intelligence: 2
+    intelligence: 2
+    transformer: 2
+    MCP: 1
