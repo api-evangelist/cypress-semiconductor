@@ -1,16 +1,23 @@
 aid: cypress-semiconductor
 url: https://raw.githubusercontent.com/api-evangelist/cypress-semiconductor/refs/heads/main/apis.yml
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - infineon/btsdk-include
+    - infineon/capsense
+    - infineon/modustoolbox-software
+    - infineon/mtb-hal-cat1
+    - infineon/mtb-pdl-cat1
   open_source: unknown
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 specificationVersion: '0.23'
 accessModel:
@@ -68,7 +75,6 @@ apis:
       - TRAVEO
       - XMC
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://www.infineon.com
     humanURL: https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/
     properties:
       - url: https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/
@@ -116,7 +122,6 @@ apis:
       - WICED
       - Wireless
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://www.infineon.com
     humanURL: https://www.infineon.com/cms/en/product/promopages/airoc-bluetooth/
     properties:
       - url: https://www.infineon.com/cms/en/product/promopages/airoc-bluetooth/
@@ -179,7 +184,6 @@ apis:
       - Microcontrollers
       - TRAVEO
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://www.infineon.com
     humanURL: https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/
     properties:
       - url: https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/
