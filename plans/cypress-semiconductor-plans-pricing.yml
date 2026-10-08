@@ -99,3 +99,20 @@ plans:
 maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - object
+  plans:
+  - name: ModusToolbox Free Developer Ecosystem
+    access: free
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    - other
+    periods:
+    - per-use
