@@ -1,4 +1,4 @@
-# Cypress Semiconductor (cypress-semiconductor)
+# Cypress Semiconductor
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,218 +66,137 @@
 
 Cypress Semiconductor was a US-based semiconductor company known for its PSoC programmable system-on-chip microcontrollers, WICED Wi-Fi and Bluetooth connectivity stacks, NOR Flash memory, CapSense capacitive touch sensing, and Traveo automotive microcontrollers. Infineon Technologies completed its $9.4 billion acquisition of Cypress on April 16, 2020, and Cypress now operates as a wholly owned subsidiary of Infineon. The former Cypress product lines (PSoC, AIROC formerly WICED, NOR Flash, CapSense, Traveo) remain in active development under Infineon branding, and the cypress.com domain redirects to infineon.com. The former Cypress developer surface — including PSoC Creator (legacy) and the modern ModusToolbox embedded development ecosystem — is now hosted on the Infineon GitHub organization (github.com/Infineon) which contains 2,143 public repositories spanning code examples, board support packages, HAL libraries, middleware, and configurators for PSoC, AIROC, Traveo, XMC, and AURIX device families. The original Cypress GitHub organization (github.com/cypresssemiconductorco) has been wound down to four placeholder repos that redirect users to the Infineon org. Cypress' APIs are predominantly embedded software APIs (C/C++ HAL, PDL, middleware libraries) rather than HTTP/REST surfaces, consumed by firmware engineers via ModusToolbox, Eclipse, and Visual Studio Code workflows.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/cypress-semiconductor/refs/heads/main/apis.yml)
+**Areas:** Acquired · Bluetooth · CapSense · Embedded Systems · Hardware · Infineon · IoT · Microcontrollers · NOR Flash · PSoC · Semiconductors · Wi-Fi
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Cypress Semiconductor on APIs.io
 
-## Tags
+Everything profiled for Cypress Semiconductor is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cypress-semiconductor/](https://apis.io/providers/cypress-semiconductor/)** — or go straight to one of the APIs or properties below.
 
-- Acquired, Bluetooth, CapSense, Embedded Systems, Hardware, Infineon, IoT, Microcontrollers, NOR Flash, PSoC, Semiconductor, WiFi
+### APIs (6)
 
-## Timestamps
+- [ModusToolbox Software Ecosystem](https://apis.io/apis/cypress-semiconductor/modustoolbox/) — ModusToolbox is Infineon's modern embedded development ecosystem and the successor to Cypress' PSoC Creator. It is a collection of GUI and non-GUI tools,…
+- [PSoC HAL and Peripheral Driver Library (PDL)](https://apis.io/apis/cypress-semiconductor/psoc-hal/) — The PSoC Hardware Abstraction Layer (HAL) and Peripheral Driver Library (PDL) are the C-language embedded APIs developers use to program Cypress-originated…
+- [AIROC Bluetooth (formerly WICED)](https://apis.io/apis/cypress-semiconductor/airoc-bluetooth/) — AIROC Bluetooth is the Infineon-rebranded Cypress WICED Bluetooth and Bluetooth LE software stack and SDK, supporting CYW20xxx, CYW43xxx, and AIROC combo…
+- [AIROC Wi-Fi (formerly WICED)](https://apis.io/apis/cypress-semiconductor/airoc-wifi/) — AIROC Wi-Fi is the Infineon-rebranded Cypress WICED Wi-Fi stack and SDK, including the Wi-Fi Host Driver (WHD) and connectivity middleware that drives…
+- [CapSense Capacitive Touch Library](https://apis.io/apis/cypress-semiconductor/capsense/) — CapSense is Cypress' (now Infineon's) capacitive touch sensing technology, exposed to firmware developers as a ModusToolbox middleware library and Device…
+- [TRAVEO T2G Automotive Microcontroller SDK](https://apis.io/apis/cypress-semiconductor/traveo-t2g/) — TRAVEO T2G is the automotive Arm Cortex-M microcontroller family inherited from Cypress, now developed under Infineon. Developers program TRAVEO T2G via…
 
-- **Modified:** 2026-05-23
+### Published properties
 
-## Acquisition Note
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Cypress Semiconductor became part of Infineon Technologies on **16 April 2020** in a transaction valued at approximately **$9.4 billion**. All former Cypress product lines (PSoC, AIROC formerly WICED, CapSense, TRAVEO T2G, Semper / HyperFlash NOR Flash, USB-C PD) continue under Infineon branding. The developer surface for these products now lives on `infineon.com`, `documentation.infineon.com`, `community.infineon.com`, and `github.com/Infineon`. The legacy `cypress.com` domain redirects to `infineon.com`; the legacy `github.com/cypresssemiconductorco` organization retains only four placeholder/redirect repositories.
+#### JSON Schema (3)
 
-## APIs
+The data models the API reads and writes.
 
-### ModusToolbox Software Ecosystem
+- [ModusToolbox Board Support Package](https://apis.io/schemas/cypress-semiconductor/cypress-semiconductor-board-support-package/)
+- [CapSense Configuration](https://apis.io/schemas/cypress-semiconductor/cypress-semiconductor-capsense-configuration/)
+- [ModusToolbox Application](https://apis.io/schemas/cypress-semiconductor/cypress-semiconductor-modustoolbox-application/)
 
-ModusToolbox is Infineon's modern embedded development ecosystem and the successor to Cypress' PSoC Creator. It is a collection of GUI and non-GUI tools, libraries, configurators, board support packages (BSPs), and middleware for building applications on PSoC Arm Cortex microcontrollers (inherited from Cypress), AIROC Wi-Fi and Bluetooth devices (formerly Cypress WICED), TRAVEO T2G automotive microcontrollers (inherited from Cypress), XMC industrial microcontrollers, and USB-C Power Delivery microcontrollers. ModusToolbox runs on Linux, macOS, and Windows, supports VS Code, Eclipse, and IAR IDEs, and ships with the GNU C compiler. The most recent stable release line as of 2026 is ModusToolbox v3.x (v3.7 reference in the Infineon developer community).
+#### JSON-LD (1)
 
-**Human URL:** [https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/)
+Linked-data contexts for the provider's vocabulary.
 
-#### Tags
+- [Cypress Semiconductor Context](https://apis.io/jsonld/cypress-semiconductor/cypress-semiconductor-context/)
 
-- AIROC, Embedded Development, IDE, ModusToolbox, PSoC, TRAVEO, XMC
+#### Vocabulary (1)
 
-#### Properties
+The provider's domain terms, defined.
 
-- [Documentation](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/)
-- [APIReference](https://documentation.infineon.com/modustoolbox/docs/tpf1712593103524)
-- [GitHubRepository](https://github.com/Infineon/modustoolbox-software)
-- [CodeExamples](https://github.com/Infineon/Code-Examples-for-ModusToolbox-Software)
-- [Training](https://github.com/Infineon/training-modustoolbox)
-- [SDK](https://softwaretools.infineon.com/tools/com.ifx.tb.tool.modustoolbox)
-- [Support](https://community.infineon.com/t5/ModusToolbox/bd-p/ModusToolboxForum)
+- [Cypress Semiconductor Vocabulary](https://apis.io/vocabularies/cypress-semiconductor/cypress-semiconductor-vocabulary/)
 
-### PSoC HAL and Peripheral Driver Library (PDL)
+#### Governance rules (2)
 
-The PSoC Hardware Abstraction Layer (HAL) and Peripheral Driver Library (PDL) are the C-language embedded APIs developers use to program Cypress-originated PSoC 4, PSoC 6, and PSoC Edge microcontrollers. The mtb-hal-cat1 and mtb-pdl-cat1 libraries — distributed as ModusToolbox components — provide register-level and abstracted drivers for GPIO, SCB, TCPWM, Crypto, USB, and other PSoC peripherals. These libraries are the modern Infineon-branded replacement for the legacy Cypress PSoC Creator component library.
+Spectral rulesets for the provider's contracts.
 
-**Human URL:** [https://infineon.github.io/mtb-hal-cat1/html/index.html](https://infineon.github.io/mtb-hal-cat1/html/index.html)
+- [Cypress Semiconductor — jsonschema rules](https://apis.io/rules/cypress-semiconductor/cypress-semiconductor-jsonschema-spectral-rules/)
+- [Cypress Semiconductor API Rules](https://apis.io/rules/cypress-semiconductor/cypress-semiconductor-rules/)
 
-#### Tags
+#### Security (2)
 
-- C, Embedded Systems, HAL, Microcontrollers, PDL, PSoC
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Cypress Semiconductor Domain Security](https://apis.io/security/cypress-semiconductor/cypress-semiconductor-domain-security/)
+- [Cypress Semiconductor Vulnerability Disclosure](https://apis.io/security/cypress-semiconductor/cypress-semiconductor-vulnerability-disclosure/)
 
-- [Documentation](https://infineon.github.io/mtb-hal-cat1/html/index.html)
-- [GitHubRepository](https://github.com/Infineon/mtb-hal-cat1)
-- [GitHubRepository](https://github.com/Infineon/mtb-pdl-cat1)
+#### Plans and pricing (1)
 
-### AIROC Bluetooth (formerly WICED)
+Published plans, tiers and prices.
 
-AIROC Bluetooth is the Infineon-rebranded Cypress WICED Bluetooth and Bluetooth LE software stack and SDK, supporting CYW20xxx, CYW43xxx, and AIROC combo Bluetooth/Wi-Fi parts inherited from the Cypress acquisition. Developers use the btsdk-* and AIROC libraries via ModusToolbox to build BLE peripherals, central applications, mesh networks, and Bluetooth audio products. WICED Studio has been deprecated in favor of ModusToolbox-based AIROC flows.
+- [Cypress Semiconductor Plans Pricing](https://apis.io/plans/cypress-semiconductor/cypress-semiconductor-plans-pricing/)
 
-**Human URL:** [https://www.infineon.com/cms/en/product/promopages/airoc-bluetooth/](https://www.infineon.com/cms/en/product/promopages/airoc-bluetooth/)
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- AIROC, Bluetooth, BLE, Embedded Systems, WICED, Wireless
+- [Cypress Semiconductor Rate Limits](https://apis.io/rate-limits/cypress-semiconductor/cypress-semiconductor-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://www.infineon.com/cms/en/product/promopages/airoc-bluetooth/)
-- [GitHubRepository](https://github.com/Infineon/btsdk-include)
-- [Support](https://community.infineon.com/t5/AIROC-Bluetooth/bd-p/AIROCBluetoothForum)
+What the API costs to run, by operation.
 
-### AIROC Wi-Fi (formerly WICED)
+- [Cypress Semiconductor Finops](https://apis.io/finops/cypress-semiconductor/cypress-semiconductor-finops/)
 
-AIROC Wi-Fi is the Infineon-rebranded Cypress WICED Wi-Fi stack and SDK, including the Wi-Fi Host Driver (WHD) and connectivity middleware that drives CYW43xxx and CYW55xxx Wi-Fi chipsets originally designed by Cypress (and prior to that, Broadcom). It is delivered as ModusToolbox middleware libraries (wifi-host-driver, wifi-connection-manager, wifi-mw-core) and supports station mode, AP mode, WPA3, and cloud-connected IoT applications on PSoC 6 and PSoC Edge hosts.
+## Where to find this API
 
-**Human URL:** [https://infineon.github.io/wifi-host-driver/html/index.html](https://infineon.github.io/wifi-host-driver/html/index.html)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- AIROC, Embedded Systems, IoT, WHD, WICED, WiFi
-
-#### Properties
-
-- [Documentation](https://infineon.github.io/wifi-host-driver/html/index.html)
-- [GitHubRepository](https://github.com/Infineon/wifi-host-driver)
-- [GitHubRepository](https://github.com/Infineon/wifi-connection-manager)
-
-### CapSense Capacitive Touch Library
-
-CapSense is Cypress' (now Infineon's) capacitive touch sensing technology, exposed to firmware developers as a ModusToolbox middleware library and Device Configurator personality. CapSense supports buttons, sliders, touchpads, and proximity sensing on PSoC 4, PSoC 6, and PSoC Edge devices with SmartSense auto-tuning. The CapSense Configurator GUI generates the tuning C structures consumed at runtime by the CapSense library.
-
-**Human URL:** [https://infineon.github.io/capsense/capsense_api_reference_manual/html/index.html](https://infineon.github.io/capsense/capsense_api_reference_manual/html/index.html)
-
-#### Tags
-
-- CapSense, Embedded Systems, HMI, PSoC, Touch Sensing
-
-#### Properties
-
-- [Documentation](https://infineon.github.io/capsense/capsense_api_reference_manual/html/index.html)
-- [GitHubRepository](https://github.com/Infineon/capsense)
-
-### TRAVEO T2G Automotive Microcontroller SDK
-
-TRAVEO T2G is the automotive Arm Cortex-M microcontroller family inherited from Cypress, now developed under Infineon. Developers program TRAVEO T2G via ModusToolbox using a dedicated PDL, HAL, and BSP set (mtb-pdl-cat1, mtb-hal-cat1 variants and the cat1c CMSIS device support) for body, cluster, and gateway ECU applications. AURIX Development Studio remains the path for Infineon's TriCore AURIX automotive MCUs, while TRAVEO T2G stays on ModusToolbox.
-
-**Human URL:** [https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/](https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/)
-
-#### Tags
-
-- Automotive, Cortex-M, Embedded Systems, Microcontrollers, TRAVEO
-
-#### Properties
-
-- [Documentation](https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/)
-- [GitHubRepository](https://github.com/Infineon/mtb-pdl-cat1)
-- [Support](https://community.infineon.com/t5/TRAVEO-T2G/bd-p/TRAVEOT2GForum)
-
-
-#### Tags
-
-- Flash Memory, HyperFlash, Memory, NOR Flash, Semper
-
-#### Properties
-
-- [Documentation](https://www.infineon.com/cms/en/product/memories/nor-flash/)
-- [GitHubRepository](https://github.com/Infineon/serial-flash)
-- [GitHubRepository](https://github.com/Infineon/serial-memory)
-
-## Common Properties
-
-- [Portal](https://www.infineon.com)
-- [DeveloperPortal](https://softwaretools.infineon.com/welcome)
+- [Website](https://www.infineon.com/)
 - [Documentation](https://documentation.infineon.com/modustoolbox/)
-- [GitHubOrganization (current)](https://github.com/Infineon)
-- [GitHubOrganization (legacy)](https://github.com/cypresssemiconductorco)
 - [Support](https://community.infineon.com)
-- [LinkedIn](https://www.linkedin.com/company/infineon-technologies)
 - [Blog](https://community.infineon.com/t5/Blogs/ct-p/Blogs)
-- [TrustCenter / Acquisition Notice](https://www.infineon.com/cms/en/about-infineon/company/acquisitions/cypress/)
+- [Trust centre](https://www.infineon.com/cms/en/about-infineon/company/acquisitions/cypress/)
+- [GitHub](https://github.com/Infineon)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| PSoC Programmable System-on-Chip | Cypress' flagship PSoC 4, PSoC 6, and PSoC Edge Arm Cortex-M MCUs with configurable analog and digital fabric, now produced under Infineon. |
-| AIROC Wireless Connectivity | Rebranded WICED Wi-Fi and Bluetooth combo silicon (CYW43xxx, CYW20xxx, CYW55xxx) with ModusToolbox middleware. |
-| CapSense Capacitive Touch | Capacitive sensing IP for buttons, sliders, and proximity, with SmartSense auto-tuning and a dedicated Configurator GUI. |
-| TRAVEO T2G Automotive MCUs | Arm Cortex-M-based automotive microcontrollers for body, cluster, and gateway ECUs, developed via ModusToolbox. |
-| Semper / HyperFlash NOR Memory | High-reliability and high-bandwidth NOR Flash memory families with serial, QSPI, and HyperBus interfaces. |
-| ModusToolbox Development Ecosystem | Cross-platform tools, BSPs, HAL/PDL libraries, middleware, and configurators that replaced Cypress PSoC Creator and WICED Studio. |
-| Open Source Reference Code | 2,143 public repositories on the Infineon GitHub org including 87+ ModusToolbox-tagged repos, mtb-example-* code examples, and BSP packages. |
+**Kin Score 23.8** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## UseCases
+| Facet | Score |
+|---|---|
+| Discoverability | 63.4 |
+| Contract quality | 21.2 |
+| Contract governance | 27.3 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 5.3 |
 
-| Name | Description |
-|------|-------------|
-| Connected IoT Devices | Building Wi-Fi and Bluetooth-connected IoT endpoints on PSoC 6 + AIROC silicon using ModusToolbox middleware. |
-| Touch and HMI Interfaces | Designing capacitive touch buttons, sliders, and proximity surfaces with CapSense on PSoC microcontrollers. |
-| Automotive ECU Development | Programming TRAVEO T2G microcontrollers for body, cluster, and gateway electronic control units. |
-| Industrial Microcontrollers | Using PSoC and XMC parts together in factory automation, motor drive, and industrial sensing applications. |
-| Secured Embedded Applications | Leveraging PSoC 6 dual-core (Cortex-M4 + Cortex-M0+) architecture and OPTIGA Trust for root-of-trust IoT designs. |
-| USB-C Power Delivery | Building USB-C PD controllers and chargers on Infineon's PD MCU family with ModusToolbox. |
+**Agent readiness 1.9** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Visual Studio Code | ModusToolbox ships a VS Code extension as a primary supported IDE for embedded development. |
-| Eclipse IDE | ModusToolbox integrates with Eclipse via the Eclipse IDE for ModusToolbox distribution. |
-| IAR Embedded Workbench | ModusToolbox project export supports IAR EWARM for Arm Cortex-M PSoC targets. |
-| Arm Mbed OS | PSoC 6 and AIROC parts have Arm Mbed OS targets, enabling Mbed-based application development. |
-| Zephyr RTOS | Infineon contributes board support for PSoC 6 and PSoC Edge to the Zephyr RTOS project. |
-| MicroPython | An Infineon-maintained PSoC 6 / PSoC Edge port of MicroPython enables Python-based prototyping. |
-| Arduino | Arduino cores exist for XMC (XMC-for-Arduino) and PSoC 6 (arduino-core-psoc6) on the Infineon GitHub org. |
-| Amazon FreeRTOS | Cypress was a launch partner for Amazon FreeRTOS; the amazon-freertos repository remains in the legacy Cypress GitHub org. |
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cypress-semiconductor/](https://apis.io/providers/cypress-semiconductor/).
 
-Machine-readable artifacts profiling Cypress / Infineon's developer surface.
+## How this profile is made
 
-### JSON Schema
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Cypress Semiconductor Board Support Package Schema](json-schema/cypress-semiconductor-board-support-package-schema.json)
-- [Cypress Semiconductor CapSense Configuration Schema](json-schema/cypress-semiconductor-capsense-configuration-schema.json)
-- [Cypress Semiconductor ModusToolbox Application Schema](json-schema/cypress-semiconductor-modustoolbox-application-schema.json)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cypress Semiconductor: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON-LD
+## Open an issue
 
-- [Cypress Semiconductor Context](json-ld/cypress-semiconductor-context.jsonld)
-
-## Vocabulary
-
-- [Cypress Semiconductor Vocabulary](vocabulary/cypress-semiconductor-vocabulary.yml) — Domain vocabulary for Cypress product lines (PSoC, AIROC/WICED, CapSense, TRAVEO, NOR Flash) and the Infineon ModusToolbox ecosystem
-
-## Rules
-
-- [Cypress Semiconductor Spectral Rules](rules/cypress-semiconductor-rules.yml) — Rules enforcing API Evangelist conventions for Cypress / Infineon embedded artifacts
-
-## Plans
-
-- [Cypress Semiconductor Plans / Pricing](plans/cypress-semiconductor-plans-pricing.yml) — Free ModusToolbox developer ecosystem bundled with silicon purchase
-
-## Rate Limits
-
-- [Cypress Semiconductor Rate Limits](rate-limits/cypress-semiconductor-rate-limits.yml) — Local SDK / GitHub-hosted; no centralized HTTP API rate limit
-
-## FinOps
-
-- [Cypress Semiconductor FinOps](finops/cypress-semiconductor-finops.yml) — FOCUS-aligned: hardware purchase, not API metering; legal counterparty is Infineon Technologies AG
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cypress-semiconductor/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
